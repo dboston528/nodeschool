@@ -1,11 +1,15 @@
-//allows you to use node file system methods
+//The fs module provides an API for  interacting with the file sytem.
 const fs = require('fs');
-//this method returns the extension of a path.
+//this module provies utilities for working with file and directory paths.
 const path = require('path');
 
+//Global obejct arguments to used in the next funcion
 const folder = process.argv[2];
 const ext = '.' + process.argv[3];
 
+/* Method from the file system module using the directory 
+   as the first  parameter, and the async callback as the 
+   second parmeter */
 fs.readdir(folder, function(err, files) {
   if (err) {
     return console.log(err);
